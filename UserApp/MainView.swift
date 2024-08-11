@@ -9,7 +9,28 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                NavigationLink(destination: NewUserView()){
+                    Text("Novo Usuário")
+                    .padding()
+                    .background(.green)
+                    .foregroundStyle(.white)
+                    .cornerRadius(8)
+                }
+                .padding()
+                
+                NavigationLink( destination: UserListView()){
+                    Text("Lista de Usuários")
+                    .padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .cornerRadius(8)
+                }
+                .padding()
+            }
+            .navigationTitle("Menu Principal")
+        }
     }
 }
 
