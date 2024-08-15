@@ -12,21 +12,21 @@ struct MainView: View {
         NavigationView{
             VStack{
                 NavigationLink(destination: NewUserView()){
-                    Text("Novo Usuário")
-                    .padding()
-                    .background(.green)
-                    .foregroundStyle(.white)
-                    .cornerRadius(8)
+                    Text("Novo Usuário").foregroundStyle(.white)
                 }
+                .padding()
+                .frame(width:200 ,height: 50)
+                .background(.blue)
+                .cornerRadius(8)
                 .padding()
                 
                 NavigationLink( destination: UserListView()){
-                    Text("Lista de Usuários")
-                    .padding()
-                    .background(.blue)
-                    .foregroundStyle(.white)
-                    .cornerRadius(8)
+                    Text("Lista de Usuários").foregroundStyle(.white)
                 }
+                .padding()
+                .frame(width:200 ,height: 50)
+                .background(.green)
+                .cornerRadius(8)
                 .padding()
             }
             .navigationTitle("Menu Principal")
